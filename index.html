@@ -38,7 +38,7 @@
               <div class='text-center'>
                 <h4 class="dropdown-header">Arrangements</h4>
               </div>
-              <a class="dropdown-item" href="#">Set Arrangement</a>
+              <a class="dropdown-item" href="#" id="arrangementSetButton">Set Arrangement</a>
               <a class="dropdown-item" href="#">Save Arrangement</a>
               <div class='text-center'>
                 <h4 class="dropdown-header">Formation</h4>
@@ -103,7 +103,13 @@
 
 <script type="text/javascript">
   // Create JoyStick object into the DIV 'joyDiv'
-  var joy = new JoyStick('joyDiv');
+
+
+  const JOYSTICK_ENABLED = false;
+
+  if (JOYSTICK_ENABLED) {
+    var joy = new JoyStick('joyDiv');
+  }
 
   // TODO joystick code
   // TODO autonomy code
