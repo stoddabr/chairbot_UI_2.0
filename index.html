@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<link href="./src/dependencies/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+<link rel="stylesheet" href="./src/components/selector/chairSelector.css" />
+<link rel="stylesheet" href="./src/components/camera/camera-frame.css" />
+<link rel="stylesheet" href="./src/components/joystick/joystick.css" />
+<script src="/src/components/joystick/joystick.js"></script>
+
+<script src="./src/dependencies/bootstrap.bundle.min.js"
+  integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+<html lang="en"> 
+<body style="background-color: rgb(33,37,41); width: 100vw; height: 100vh;">
+
+  <div style="text-align: center">
+    <img id="camera-frame" src="./assets/example-video-frame.png" class='camera-frame-class' /> <!-- FIXME change src to "{{ url_for('video_feed') }}"-->
+  </div>
+
+  <!-- top bar with dropdowns -->
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top" aria-label="Third navbar example">
+    <div class="container-fluid">
+      <button class="btn btn-danger mx-2" type="submit">STOP!</button>
+      <a class="navbar-brand" href="#">Tele-ChairBot UI</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
+        aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarsExample03">
+        <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAutonomy" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Autonomy
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownAutonomy">
+              <div class='text-center'>
+                <h4 class="dropdown-header">Arrangements</h4>
+              </div>
+              <a class="dropdown-item" href="#">Set Arrangement</a>
+              <a class="dropdown-item" href="#">Save Arrangement</a>
+              <div class='text-center'>
+                <h4 class="dropdown-header">Formation</h4>
+              </div>
+              <a class="dropdown-item" href="#">Set Formation</a>
+              <a class="dropdown-item" href="#">Save Formation</a>
+              <div class='text-center'>
+                <h4 class="dropdown-header">Snap-to-Direction</h4>
+              </div>
+              <a class="dropdown-item" href="#">Snap-to-Room</a>
+              <a class="dropdown-item" href="#">Snap-to-Object</a>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- chair selector -->
+  <div class="card fixed-bottom m-2" style="width: 10rem; max-height: 20vh; overflow: auto;">
+    <div class="card-body">
+      <!-- prevent close on click -->
+      <label>
+        <input type="checkbox" class="mx-2" />
+        Select All
+      </label>
+      <br />
+      <label>
+        <input type="checkbox" class="mx-2" />
+        Chair 1
+      </label>
+      <br />
+      <label>
+        <input type="checkbox" class="mx-2" />
+        Chair 2
+      </label>
+      <br />
+      <label>
+        <input type="checkbox" class="mx-2" />
+        Chair 3
+      </label>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- joystick code -->
+  <!-- using absolute positioning breaks joystick so this ugly workaround is used -->
+  <!-- from https://stackoverflow.com/a/45999283 -->
+  <div style="padding-bottom:10px; display: flex; flex-wrap: wrap; align-items: flex-end; height: 100vh;">
+    <div style="
+            margin-left: auto;
+            font-size: small;
+            padding: 0 0 4px 20px;
+            font-style: italic;">
+    <!-- joystick div -->
+    <div id="joyDiv" style="width:150px;height:150px;margin-bottom:20px;margin:10px;align-self:flex-end;" />
+    </div>
+  </div>
+</body>
+</html>
+
+<script type="text/javascript">
+  // Create JoyStick object into the DIV 'joyDiv'
+  var joy = new JoyStick('joyDiv');
+
+  // TODO joystick code
+  // TODO autonomy code
+  // TODO selector code
+</script>
