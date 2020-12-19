@@ -5,9 +5,10 @@ When you finish a task, put your initials and the date
 
 - [X] Write TODO list (BSS 12/13)
 - [X] Write responsive layout code (BSS 12/11)
-- [ ] (optional) Test running with a Python Flask server 
-- [ ] Integrate into the main server: [github repo of server, clean branch](https://github.com/stoddabr/chairbot_server/tree/winter_cleaning)
-- [ ] Sync old Javascript function calls to new UI
+- [ ] (optional) Test running with a Python Flask server (Breanne)
+- [ ] Integrate into the main server: [github repo of server, clean branch](https://github.com/stoddabr/chairbot_server/tree/winter_cleaning) (Breanne)
+- [ ] Sync old Javascript function calls to new UI (Breanne)
+- [ ] Implement tap-goal (Avi)
 
 ## Useful links
 * How to import files https://stackoverflow.com/questions/8988855/include-another-html-file-in-a-html-file?page=1&tab=votes#tab-top
