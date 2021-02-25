@@ -15,7 +15,8 @@ Opening up the index.html file directly in a browser will cause an error (CORS p
 
 To run the website properly, it needs to be served from a server. These steps will go through installing one type of server http-server by NodeJS
 - Download nodeJS. This is a runtime environment for javascript that will enable you to run code such as a server https://nodejs.org/en/
-- Now use node to install http-server . If node was properly added to your OS path then this should be as simple as running `npm i http-server` from a command line
+- Now use node to install http-server. If node was properly added to your OS path then this should be as simple as running `npm i http-server` from a command line https://www.npmjs.com/package/http-server
+
 Now the server should be installed on your computer. To run it, navigate to the directory with the index.html file you want to view and run `http-server` from your command line
 If things work correctly, running `http-server` should trigger stdout that includes a local website link (something like http://localhost:8080). Opening that up in a browser should show make the website render properly
 
