@@ -10,6 +10,15 @@ When you finish a task, put your initials and the date
 - [ ] Sync old Javascript function calls to new UI (Breanne)
 - [ ] Implement tap-goal (Avi)
 
+## How to run
+Opening up the index.html file directly in a browser will cause an error (CORS prevents some imports from happening)
+
+To run the website properly, it needs to be served from a server. These steps will go through installing one type of server http-server by NodeJS
+- Download nodeJS. This is a runtime environment for javascript that will enable you to run code such as a server https://nodejs.org/en/
+- Now use node to install http-server . If node was properly added to your OS path then this should be as simple as running `npm i http-server` from a command line
+Now the server should be installed on your computer. To run it, navigate to the directory with the index.html file you want to view and run `http-server` from your command line
+If things work correctly, running `http-server` should trigger stdout that includes a local website link (something like http://localhost:8080). Opening that up in a browser should show make the website render properly
+
 ## Useful links
 * How to import files https://stackoverflow.com/questions/8988855/include-another-html-file-in-a-html-file?page=1&tab=votes#tab-top
 * Run with `http-server` (it's extremely simple once setup but requires [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)) https://www.npmjs.com/package/http-server 
